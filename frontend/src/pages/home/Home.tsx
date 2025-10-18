@@ -13,7 +13,7 @@ const Home = () => {
       <img src="./Rasmiy portret qora suitda.png" alt="Rasmiy portret qora suitda.png"
        className="w-32 h-32 rounded-full object-cover" />
        <h3 className="py-4 text-lg flex items-center gap-2">Hi! I'm Izzatbek Abdusharipov
-        <img src="./hand-icon.png" alt="hand icon" className="w-8" />
+        <img src="./hand-icon.png" alt="hand icon" className="w-8 animate-bounce" />
        </h3>
       <div className="space-y-5 text-center">
          <h1 className="text-3xl md:text-5xl font-extrabold">full stack developer</h1>
@@ -24,7 +24,7 @@ const Home = () => {
             <ArrowRight size={18} />
           </Button>
           <Button className="text-xs">my resume
-            <Download size={18} />
+            <Download size={18} className="animate-bounce" />
           </Button>
         </div>
       </div>
