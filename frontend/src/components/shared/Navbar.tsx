@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {} from 'lucide-react';
 import { Button } from '../ui/button';
 import '../../app/styles/Global.css';
 import { UseTheme } from '../../app/providers/ThemeProvider';
 const Navbar = () => {
   const {theme,toggleTheme}=UseTheme();
+  const navigate=useNavigate();
   return (
     <div className='fixed top-0 left-0 w-full flex items-center justify-between pdg'>
-      <h1 className='text-lg md:text-3xl font-semibold'>Izzatbek.</h1>
+      <h1 className='text-lg md:text-3xl font-semibold cursor-pointer' onClick={()=>navigate("/")}>Izzatbek.</h1>
       <div className="flex items-center gap-3">
         <Link to={"/"} className='hover:text-blue-500 transition duration-300'>Home</Link>
         <Link to={"/about"} className='hover:text-blue-500 transition duration-300'>About</Link>
