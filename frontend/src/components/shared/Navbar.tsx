@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import {} from 'lucide-react';
 import { Button } from '../ui/button';
 import '../../app/styles/Global.css';
+import { UseTheme } from '../../app/providers/ThemeProvider';
 const Navbar = () => {
+  const {theme,toggleTheme}=UseTheme();
   return (
     <div className='fixed top-0 left-0 w-full flex items-center justify-between pdg'>
       <h1 className='text-lg md:text-3xl font-semibold'>Izzatbek.</h1>
@@ -14,7 +16,16 @@ const Navbar = () => {
         <Link to={"/contact"} className='hover:text-blue-500 transition duration-300'>Contact</Link>
       </div>
       <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-        <img src="./moon_icon.png" alt="moon" className='w-6 cursor-pointer' />
+        <button onClick={toggleTheme}>
+          {
+          theme === "light" 
+          ? (
+              <img src="./moon_icon.png" alt="moon" className='w-6 cursor-pointer' />
+          ) : (
+            <img src="./sun_icon.png" alt="moon" className='w-6 cursor-pointer' />
+          )
+        }
+        </button>
         <Button className='text-sm group relative px-6 py-3 bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500
          text-white shadow-md cursor-pointer  hover:text-white hover:from-sky-400 hover:via-blue-500 hover:to-indigo-600 transition-all duration-300
           hover:-translate-y-0.5 active:translate-y-0' variant={'outline'} >
