@@ -18,7 +18,7 @@ const Home = () => {
       <div className="space-y-5 text-center">
          <h1 className="text-3xl md:text-5xl font-extrabold">full stack developer</h1>
         <h2 className="text-3xl md:text-5xl font-extrabold">based in Uzbekistan</h2>
-        <p>I am a frontend developer from Urgench, Uzbekistan, with 2 years of experience in many fields.</p>
+        <p>I am a Full Stack developer from Urgench, Uzbekistan, with 2 years of experience in many fields.</p>
         <div className="flex items-center justify-center gap-3 ">
           <Button className="text-xs" variant={"outline"} >connect with me
             <ArrowRight size={18} />

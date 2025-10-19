@@ -1,11 +1,14 @@
 import Navbar from "../../components/shared/Navbar"
 import "../../app/styles/Global.css";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import './About.css';
+import { UseTheme } from "../../app/providers/ThemeProvider";
 const About = () => {
+  const {theme}=UseTheme();
   return (
     <div>
       <Navbar/>
-      <div className="w-full min-h-screen pt-24">
+      <div className={`w-full min-h-screen pt-24 ${theme ==="light" ? "bg_color" : "bg-gray-900 text-white"}`}>
         <div className="pdg flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           <img src="./myphoto.jpg" alt="my photo" className="w-64 rounded-md" />
           <div className="w-full">
