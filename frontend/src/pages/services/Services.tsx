@@ -2,10 +2,11 @@ import { ArrowRight } from "lucide-react";
 import Navbar from "../../components/shared/Navbar";
 import { Card, CardHeader, CardContent } from "../../components/ui/card";
 import { UseTheme } from "../../app/providers/ThemeProvider";
+import {motion} from 'framer-motion';
 
 const ServiceCard = ({ title, description, iconSrc, iconAlt }:{title:string,description:string,iconSrc:string,iconAlt:string}) => {
   return (
-    <Card className="p-4 w-full max-w-[250px] bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow">
+    <Card className="p-4 w-full md:max-w-[250px] bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow">
       <CardHeader className="space-y-3">
         <img src={iconSrc} alt={iconAlt} className="w-8 h-8 object-contain" />
         <h2 className="text-xl font-semibold">{title}</h2>
@@ -51,23 +52,43 @@ const Services = () => {
   ];
 
   return (
-    <div className={`w-full min-h-screen ${theme === "light" ? "bg-color" : "bg-gray-900 text-white"} pt-24`}>
+    <motion.div
+    initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.6 }}
+     className={`w-full min-h-screen ${theme === "light" ? "bg-color" : "bg-gray-900 text-white"} pt-24`}>
       <Navbar />
-      <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-        <img
+      <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.6 }}
+       className="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+        <motion.img
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
           src="./svc.jpg"
           alt="Services overview"
           className="w-full md:w-1/2 h-[30rem] object-cover rounded-lg shadow-md"
         />
-        <div className="w-full md:w-1/2 space-y-6">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+         className="w-full md:w-1/2 space-y-6">
           <p className="text-lg md:text-xl text-pink-500">What I Offer</p>
           <h1 className="text-3xl md:text-5xl font-bold">My Services</h1>
           <p className="text-gray-600 dark:text-gray-300">
             I am a Full Stack developer from Urgench, Uzbekistan, with 2 years of experience in multiple domains.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+           className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.map((service, index) => (
               <ServiceCard
+                
                 key={index}
                 title={service.title}
                 description={service.description}
@@ -75,10 +96,10 @@ const Services = () => {
                 iconAlt={service.iconAlt}
               />
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -3,13 +3,19 @@ import { UseTheme } from "../../app/providers/ThemeProvider";
 import Navbar from "../../components/shared/Navbar"
 import { Button } from "../../components/ui/button";
 import './Home.css';
+import {motion} from 'framer-motion';
 
 const Home = () => {
   const {theme}=UseTheme();
   return (
     <div className={`${theme === "light" ? "bg-color" : "bg-gray-900 text-white"} w-full min-h-screen`}>
     <Navbar/>
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{duration:1}}
+     className="flex flex-col items-center justify-center min-h-screen">
       <img src="./Rasmiy portret qora suitda.png" alt="Rasmiy portret qora suitda.png"
        className="w-32 h-32 rounded-full object-cover" />
        <h3 className="py-4 text-lg flex items-center gap-2">Hi! I'm Izzatbek Abdusharipov
@@ -29,7 +35,7 @@ const Home = () => {
         </div>
       </div>
 
-    </div>
+    </motion.div>
     {/* footer */}
     </div>
   )
