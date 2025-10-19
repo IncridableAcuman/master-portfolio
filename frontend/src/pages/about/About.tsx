@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <Navbar/>
-      <div className={`w-full min-h-screen pt-24 ${theme ==="light" ? "bg_color" : "bg-gray-900 text-white"}`}>
+      <div className={`w-full min-h-screen pt-24 ${theme ==="light" ? "bg-color" : "bg-gray-900 text-white"}`}>
         <div className="pdg flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           <img src="./myphoto.jpg" alt="my photo" className="w-64 rounded-md" />
           <div className="w-full">

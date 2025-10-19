@@ -1,3 +1,5 @@
-.bg_color{
+.bg-color{
    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+   min-width: 100vh;
+   margin: 0;
 }

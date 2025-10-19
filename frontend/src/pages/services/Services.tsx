@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <div className={`w-full min-h-screen ${theme === "light" ? "bg_color" : "bg-gray-900 text-white"} pt-24`}>
+    <div className={`w-full min-h-screen ${theme === "light" ? "bg-color" : "bg-gray-900 text-white"} pt-24`}>
       <Navbar />
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
         <img
