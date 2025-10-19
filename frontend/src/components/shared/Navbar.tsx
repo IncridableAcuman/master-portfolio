@@ -7,7 +7,7 @@ const Navbar = () => {
   const {theme,toggleTheme}=UseTheme();
   const navigate=useNavigate();
   return (
-    <div className='fixed top-0 left-0 w-full flex items-center justify-between pdg'>
+    <div className={`fixed top-0 left-0 w-full flex items-center justify-between pdg bg-gradient-to-b from-[#e0e0e0]`}>
       <h1 className='text-lg md:text-3xl font-semibold cursor-pointer' onClick={()=>navigate("/")}>Izzatbek.</h1>
       <div className="flex items-center gap-3">
         <Link to={"/"} className='hover:text-blue-500 transition duration-300'>Home</Link>
