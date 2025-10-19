@@ -17,7 +17,7 @@ const Projects = () => {
           <p className="text-center">Welcome to my web development portfolio! Explore a collection of projects showcasing
           my expertise in front-end development.</p>
           {/* start projects */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <div className="">
               <img src="./work-1.png" alt="work 1" className="w-40" />
             </div>
