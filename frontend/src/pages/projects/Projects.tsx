@@ -1,5 +1,5 @@
 import Navbar from "../../components/shared/Navbar"
-
+import "./Projects.css";
 const Projects = () => {
   return (
     <div>
